@@ -3,4 +3,5 @@ data
 .env
 .venv
 
+output.txt
 testAPI.ipynb
