@@ -10,7 +10,6 @@ import os
 from dotenv import load_dotenv
 from groq import Groq
 
-
 load_dotenv()
 api_key = os.getenv("GROQ_API_KEY")
 client = Groq(
@@ -50,7 +49,15 @@ def load_RAG():
 
 query_engine = load_RAG()
 
-st.title("GIKI Digital Library")
+col1,col2 = st.columns([4,1])
+
+with col1:
+    st.title("GIKI Digital Library")
+with col2:
+    st.write("")
+    st.write("")
+    if st.button("New Chat"):
+        st.session_state.messages = []
 
 # Initialize chat history
 if "messages" not in st.session_state:
