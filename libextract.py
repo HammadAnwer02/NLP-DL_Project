@@ -2,6 +2,8 @@ from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.common.by import By
 from bs4 import BeautifulSoup
+import requests
+import os
 import time
 
 # Set up the Selenium WebDriver
@@ -13,17 +15,13 @@ driver = webdriver.Edge(service=service)
 
 # Open the website
 url = "http://10.1.56.5:8080/#library_id=Calibre_Library&panel=book_list"  # Replace with your actual URL
-
-
-# Open the webpage
 driver.get(url)
 
-# Wait for JavaScript to load the content (adjust the sleep time as needed)
-time.sleep(5)  # This is a simple way, but you can use WebDriverWait for more precision
+# Wait for JavaScript to load the content
+time.sleep(5)  # Adjust the sleep time if needed
 
 # Get the page source after the page has loaded
 html = driver.page_source
-
 
 # Use BeautifulSoup to parse the page source
 soup = BeautifulSoup(html, 'html.parser')
@@ -44,9 +42,31 @@ if container:
             if book_id and title:
                 book_data.append({"id": book_id, "title": title})
 
-        # Print the extracted book data
+        # Create a directory to save the downloaded books
+        output_dir = "Downloaded_Books"
+        os.makedirs(output_dir, exist_ok=True)
+
+        # Download each book
+        base_url = "http://10.1.56.5:8080/get/PDF"
         for book in book_data:
-            print(f"ID: {book['ID']}, Title: {book['title']}")
+            book_id = book["id"]
+            title = book["title"].replace("/", "-")  # Replace problematic characters
+            download_url = f"{base_url}/{book_id}/Calibre_Library"
+            print(f"Downloading {title} from {download_url}...")
+
+            # Use requests to download the PDF
+            try:
+                response = requests.get(download_url, stream=True)
+                if response.status_code == 200:
+                    file_path = os.path.join(output_dir, f"{title}.pdf")
+                    with open(file_path, "wb") as f:
+                        for chunk in response.iter_content(chunk_size=8192):
+                            f.write(chunk)
+                    print(f"Successfully downloaded: {title}")
+                else:
+                    print(f"Failed to download {title}. HTTP Status Code: {response.status_code}")
+            except Exception as e:
+                print(f"An error occurred while downloading {title}: {e}")
     else:
         print("No book list grid found.")
 else:

@@ -3,5 +3,7 @@ data
 .env
 .venv
 
+Downloaded_Books
+
 output.txt
 testAPI.ipynb
