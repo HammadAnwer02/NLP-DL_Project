@@ -1,0 +1,6 @@
+streamlit
+llama-index
+groq
+requests
+bs4
+selenium
