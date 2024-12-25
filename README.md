@@ -1,48 +1,62 @@
-## NLP-DL Library Chatbot 🚀
+# NLP-DL Library Chatbot 🚀  
 
-Welcome to the NLP-DL Library Chatbot project! This repository contains the implementation of an AI-powered chatbot designed to assist students in navigating and retrieving contextual information from a university’s online library. Using state-of-the-art NLP and deep learning techniques, we provide an intuitive and effective way to access knowledge from a vast collection of books.
+Welcome to the **NLP-DL Library Chatbot**! This project features an AI-powered chatbot designed to help university students navigate and retrieve contextual information from their online library. With cutting-edge NLP and deep learning techniques, the chatbot provides an intuitive and efficient way to explore a vast collection of books.  
 
-## Table of Contents 📚
-	1.	Overview
-	2.	Features
-	3.	Technologies Used
-	4.	Setup Instructions
-	5.	Usage
-	6.	File Structure
-	7.	Screenshots
-	8.	Contributing
-	9.	License
+---
 
-## Overview 📝
+## Table of Contents 📚  
+1. [Overview](#overview)  
+2. [Features](#features)  
+3. [Technologies Used](#technologies-used)  
+4. [Setup Instructions](#setup-instructions)  
+5. [Usage](#usage)  
+6. [File Structure](#file-structure)  
+7. [Screenshots](#screenshots)  
+8. [Contributing](#contributing)  
+9. [License](#license)  
+10. [Acknowledgments](#acknowledgments)  
 
-The NLP-DL Library Chatbot combines Retrieval-Augmented Generation (RAG) with a Large Language Model (LLM) to provide contextually accurate responses to user prompts. By leveraging the Groq API and advanced NLP techniques, the chatbot accesses and retrieves information specific to the university library’s vast digital collection, ensuring students receive precise and relevant answers.
+---
 
-## Features ✨
-	•	Contextual Question Answering: Responds to library-related queries with relevant and accurate information.
-	•	Book Retrieval: Scans the library database to provide detailed information about books, authors, and topics.
-	•	Dynamic RAG Integration: Combines retrieval and generation capabilities for enhanced performance.
-	•	Scalable Design: Built for seamless integration and scalability.
+## Overview 📝  
 
-## Technologies Used 🛠️
-	•	Python 3.9+: Used for running the RAG Model and connecting to the LLM.
-	•	Selenium: For web scraping and library data extraction.
-	•	Hugging Face Transformers: Pre-trained models for RAG and NLP tasks.
-	•	Groq API: Provides LLM capabilities.
-	•	Streamlit: Front-end UI for chatbot communication.
-	
+The **NLP-DL Library Chatbot** leverages a **Retrieval-Augmented Generation (RAG)** model paired with a **Large Language Model (LLM)** to deliver precise, contextually relevant responses to user queries. By integrating the **Groq API** and advanced retrieval techniques, this chatbot allows students to interact effortlessly with the university library's digital collection.  
 
-## Setup Instructions 🔧
+Key highlights include:  
+- Seamless access to detailed book information and academic references.  
+- Contextual answers tailored to user queries.  
+- Scalable and intuitive design for both developers and users.  
 
-## Prerequisites:
-	•	Python 3.9 or higher with requirement libraries installed
-	•	ChromeDriver (for Selenium)
-	•	Streamlit
-    •	Groq API Key
-    
+---
 
+## Features ✨  
+- **Contextual Question Answering**: Retrieve accurate information about books, authors, and academic topics.  
+- **Dynamic Retrieval System**: Combines retrieval with generation for optimal performance.  
+- **Streamlined UI**: User-friendly interface powered by Streamlit.  
+- **Scalability**: Designed for future expansion and integration with other systems.  
+
+---
+
+## Technologies Used 🛠️  
+- **Python 3.9+**: Core programming language for RAG and LLM integration.  
+- **Selenium**: Web scraping to extract relevant library data.  
+- **Hugging Face Transformers**: Pre-trained RAG models for retrieval and generation.  
+- **Groq API**: Provides advanced LLM capabilities for natural language understanding.  
+- **Streamlit**: Framework for building an interactive chatbot interface.  
+
+---
+
+## Setup Instructions 🔧  
+
+### Prerequisites:  
+- Python 3.9 or higher installed on your system.  
+- **ChromeDriver** (required for Selenium-based scraping).  
+- A valid **Groq API key** for LLM functionality.  
+- Streamlit installed (via `requirements.txt`).  
 
 ## Steps:
 	1.	Clone the repository:
+
 
 git clone https://github.com/HammadAnwer02/NLP-DL_Project.git
 cd NLP-DL_Project
