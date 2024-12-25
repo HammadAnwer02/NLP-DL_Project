@@ -27,7 +27,7 @@ def load_RAG():
     Settings.chunk_size = 256
     Settings.chunk_overlap = 25
 
-    documents = SimpleDirectoryReader("data").load_data()
+    documents = SimpleDirectoryReader("Downloaded_Books").load_data()
     index = VectorStoreIndex.from_documents(documents)
 
     # set number of docs to retreive
@@ -84,7 +84,6 @@ if prompt := st.chat_input("Enter your question here"):
     final_prompt = f"""[INST]
     {context}
     Please respond to the following comment. Use the context above if it is helpful.
-
     {prompt}
     [/INST]
     """
