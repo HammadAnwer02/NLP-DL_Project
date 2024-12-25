@@ -73,13 +73,22 @@ http://localhost:8501/ # Or whatever URL is provided from Streamlit
 	2.	The bot retrieves relevant information using the library’s database and responds.
 	3.	Review the results and refine your query if necessary.
 
-File Structure 📁
+## File Descriptions
 
-NLP-DL_Project/
-├── frontend.py             # Main application where we perform preprocessing, connect with LLM through Groq and create frontend
-├── requirements.txt       # Dependencies
-├──  libextract.py         # Selenium-based web scraper
-├── README.md              # Documentation
+- **`frontend.py`**:  
+  Handles the core logic of the application, including:
+  - Preprocessing user queries
+  - Connecting with the LLM through the Groq API
+  - Building the user interface for interaction  
+
+- **`requirements.txt`**:  
+  Contains all the dependencies and libraries required to run the project.
+
+- **`libextract.py`**:  
+  Implements a Selenium-based web scraper to extract relevant data.
+
+- **`README.md`**:  
+  Comprehensive documentation for understanding and setting up the project.
 
 ## Contributing 🤝
 
