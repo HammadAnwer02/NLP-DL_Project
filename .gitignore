@@ -1,9 +1,8 @@
-data
+# Ignore everything
+*
 
-.env
-.venv
-
-Downloaded_Books
-
-output.txt
-testAPI.ipynb
+# Unignore specific files
+!.gitignore
+!frontend.py
+!requirements.txt
+!README.md
