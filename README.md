@@ -33,7 +33,7 @@ Key highlights include:
 
 ---
 
-## Technologies Used 🛠️  
+## Technologies Used  
 - **Python 3.9+**: Core programming language for RAG and LLM integration.  
 - **Selenium**: Web scraping to extract relevant library data.  
 - **Hugging Face Transformers**: Pre-trained RAG models for retrieval and generation.  
@@ -79,9 +79,9 @@ Key highlights include:
 
 
 ## Usage 
-	1.	Enter your query into the chatbot interface.
-	2.	The bot retrieves relevant information using the library’s database and responds.
-	3.	Review the results and refine your query if necessary.
+1.	Enter your query into the chatbot interface.
+2.	The bot retrieves relevant information using the library’s database and responds.
+3.	Review the results and refine your query if necessary.
 
 ## File Descriptions
 
