@@ -35,7 +35,7 @@ Key highlights include:
 
 ## Technologies Used  
 - **Python 3.9+**: Core programming language for RAG and LLM integration.  
-- **Selenium**: Web scraping to extract relevant library data.  
+- **Selenium**: Web scraping to extract relevant library data.
 - **Hugging Face Transformers**: Pre-trained RAG models for retrieval and generation.  
 - **Groq API**: Provides advanced LLM capabilities for natural language understanding.  
 - **Streamlit**: Framework for building an interactive chatbot interface.  
@@ -60,9 +60,9 @@ Key highlights include:
 
 > pip install -r requirements.txt  
 
-3.	Create a .env file and include your GROQ API keys:
+3.	Create a .env file and include your GROQ API key as well as your web driver:
 	
-> GROQ_API_KEY=your_groq_api_key
+> GROQ_API_KEY=your_groq_api_key & WEB_DRIVER_PATH=your_web_driver_path
 
 4. Scrap data from GIKI's Library:
 

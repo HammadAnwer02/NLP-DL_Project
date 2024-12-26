@@ -5,9 +5,9 @@ from bs4 import BeautifulSoup
 import requests
 import os
 import time
-
+from dotenv import load_dotenv
 # Set up the Selenium WebDriver
-webdriver_path = "/Users/hammad/Downloads/edgedriver_mac64_m1/msedgedriver"  # Replace with your actual path
+webdriver_path =  os.getenv("WEB_DRIVER_PATH") 
 
 # Set up the Edge driver
 service = Service(webdriver_path)
